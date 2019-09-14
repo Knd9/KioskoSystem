@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # aplicaciones de terceros
     'rest_framework',
-    
+    'django_filters',
     # aplicaciones propias
     'kioskoapp'
 ]
@@ -105,6 +105,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#config API: Dicccionary of configuration
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_METADATA_CLASS': 'rest_framework.metadata.SimpleMetadata',
+    'DEFAULT_FILTER_BACKENDS': [
+        'rest_framework.filters.OrderingFilter',
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
