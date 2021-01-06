@@ -3,8 +3,8 @@ from rest_framework import viewsets, filters
 
 from .models import Product
 from .serializers import ProductSerializer
-# Create your views here.
 
+# Create your views here.
 class ProductViewSet(viewsets.ModelViewSet):
 
     queryset = Product.objects.all()

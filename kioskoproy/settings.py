@@ -37,11 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # aplicaciones de terceros
+    # third party apps
     'rest_framework',
     'django_filters',
-    # aplicaciones propias
+    # own apps
     'kioskoapp'
 ]
 
