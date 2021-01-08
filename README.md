@@ -1,4 +1,4 @@
-# kioskoproy
+# KioskoSystem
 
 Final project of a Python course using Django framework.
 
